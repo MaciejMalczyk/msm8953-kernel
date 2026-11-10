@@ -38,18 +38,18 @@
 		};
 	};
 //
-	reserved-memory {
-		qseecom_mem: qseecom@84300000 {
-			reg = <0x0 0x84300000 0x0 0x2000000>;
-			no-map;
-		};
-
-		ramoops@ef000000 {
-			compatible = "ramoops";
-			reg = <0x0 0xef000000 0x0 0xc0000>;
-			console-size = <0x40000>;
-		};
-	};
+// 	reserved-memory {
+// 		qseecom_mem: qseecom@84300000 {
+// 			reg = <0x0 0x84300000 0x0 0x2000000>;
+// 			no-map;
+// 		};
+//
+// 		ramoops@ef000000 {
+// 			compatible = "ramoops";
+// 			reg = <0x0 0xef000000 0x0 0xc0000>;
+// 			console-size = <0x40000>;
+// 		};
+// 	};
 //
 // 	vph_pwr: vph-pwr-regulator {
 // 		compatible = "regulator-fixed";
@@ -94,32 +94,32 @@
 // 	status = "okay";
 // };
 //
-&mdss_dsi0 {
-	vdda-supply = <&pm8953_s3>;
-	vddio-supply = <&pm8953_l6>;
-
-	pinctrl-0 = <&pmx_mdss_default>;
-	pinctrl-1 = <&pmx_mdss_sleep>;
-	pinctrl-names = "default";
-
-	status = "okay";
-
-	panel@0 {
-		compatible = "qcom,mdss-dsi-panel";
-		reg = <0>;
-
-		backlight = <&pmi8950_wled>;
-		vsp-supply = <&lab>;
-		vsn-supply = <&ibb>;
-		reset-gpios = <&tlmm 61 GPIO_ACTIVE_LOW>;
-
-		port {
-			panel_in: endpoint {
-				remote-endpoint = <&mdss_dsi0_out>;
-			};
-		};
-	};
-};
+// &mdss_dsi0 {
+// 	vdda-supply = <&pm8953_s3>;
+// 	vddio-supply = <&pm8953_l6>;
+//
+// 	pinctrl-0 = <&pmx_mdss_default>;
+// 	pinctrl-1 = <&pmx_mdss_sleep>;
+// 	pinctrl-names = "default";
+//
+// 	status = "okay";
+//
+// 	panel@0 {
+// 		compatible = "qcom,mdss-dsi-panel";
+// 		reg = <0>;
+//
+// 		backlight = <&pmi8950_wled>;
+// 		vsp-supply = <&lab>;
+// 		vsn-supply = <&ibb>;
+// 		reset-gpios = <&tlmm 61 GPIO_ACTIVE_LOW>;
+//
+// 		port {
+// 			panel_in: endpoint {
+// 				remote-endpoint = <&mdss_dsi0_out>;
+// 			};
+// 		};
+// 	};
+// };
 //
 // &mdss_dsi0_out {
 // 	remote-endpoint = <&panel_in>;
