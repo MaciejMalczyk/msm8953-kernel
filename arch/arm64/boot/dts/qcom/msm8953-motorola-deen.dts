@@ -11,13 +11,13 @@
 /delete-node/ &qseecom_mem;
 
 / {
-	model = "Motorola One (Deen)";
+	model = "deen";
 	compatible = "qcom,msm8953-deen", "qcom,msm8953-moto",
 	"qcom,msm8953", "qcom,sdm450-deen", "qcom,sdm450-moto",
 	"qcom,sdm450";
 	chassis-type = "handset";
 	qcom,msm-id = <338 0>;
-	qcom,board-id = <0x47 0xB1A0>;
+	qcom,board-id = <0x4d 0xc100>;
 //
 	battery: battery {
 		compatible = "simple-battery";
